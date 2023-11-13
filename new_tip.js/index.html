@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор чаевых</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Калькулятор чаевых</h1>
+    <form id="tipForm">
+        <label for="bill">Введите сумму счёта:</label>
+        <input id="bill" type="text" oninput="validateInputs()" placeholder="Введите положительное целое число" required><br>
+
+        <label for="percentage">Введите процент чаевых:</label>
+        <input type="text" oninput="validateInputs()" id="percentage" placeholder="Введите адекватный процент" required><br>
+
+        <label for="numOfPeople">Введите количество людей:</label>
+        <input type="text" oninput="validateInputs()" id="numOfPeople" placeholder="Введите положительное целое число" required><br>
+
+        <button type="button" id="calculateButton" onclick="calculateTip()" disabled>Рассчитать</button>
+    </form>
+
+    <div id="result" style="display: none;">
+        <h2>Результаты:</h2>
+        <p id="tipAmount"></p>
+        <p id="totalAmount"></p>
+        <p id="amountPerPerson"></p>
+    </div>
+</div>
+
+<script src="calculator.js"></script>
+</body>
+</html>
